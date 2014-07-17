@@ -19,7 +19,7 @@ meta:
 	ADDON_DESCRIPTION = Addon for interfacing with OpenNI
 	ADDON_AUTHOR = Modified from  gameoverhack by Nick B
 	ADDON_TAGS = "camera" "openni" "kinect"
-	ADDON_URL = https://github.com/SolitaryCipher/ofxOenNI
+	ADDON_URL = https://github.com/SolitaryCipher/ofxOpenNI
 
 common:
 	# dependencies with other addons, a list of them separated by spaces 
