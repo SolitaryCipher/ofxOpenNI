@@ -17,9 +17,9 @@
 meta:
 	ADDON_NAME = ofxOpenNI
 	ADDON_DESCRIPTION = Addon for interfacing with OpenNI
-	ADDON_AUTHOR = Modified from  gameoverhack by Nick Beirne
+	ADDON_AUTHOR = Modified from  gameoverhack by Nick B
 	ADDON_TAGS = "camera" "openni" "kinect"
-	ADDON_URL = https://github.com/gameoverhack/ofxOpenNI
+	ADDON_URL = https://github.com/SolitaryCipher/ofxOenNI
 
 common:
 	# dependencies with other addons, a list of them separated by spaces 
@@ -69,8 +69,13 @@ linux64:
 
 linux:
 	ADDON_LIBS =
+	ADDON_CFLAGS = -I /usr/include/ni -I /usr/include/nite
+	ADDON_LDFLAGS = /usr/lib/libOpenNI.so
 
 osx:
+	# can the libs/osx/ path be changed to data/mac/openni/lib/ ?
+	# Either way, its ~22 mb.
+	# Or seperate these files. 
 	ADDON_LIBS =
 	ADDON_LIBS += libs/osx/libnimCodecs.dylib
 	ADDON_LIBS += libs/osx/libnimMockNodes.dylib
