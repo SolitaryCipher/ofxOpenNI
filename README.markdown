@@ -13,6 +13,14 @@ The ofxOpenNI module is a wrapper for the openNI + NITE + SensorKinect libraries
 
 Tested and working on Mac OSX (10.6.8), Linux (Ubuntu 10.10 64 & 32), Windows 7 (VS2010 and Codeblocks)
 
+Latest changes (07/17/14)
+* restructured so mac/ and win/ now live in data/
+* added openni config files  (found in examples) to data/mac/openni/
+* moved include/ directory to lib/, as per newer OF addons structure
+* added osx dylibs to libs/osx
+* added addon_config.mk, so all files are included for OSX and the proper make flags for linux. 
+
+
 Latest changes (11/11/12)
 * Deprecated version 1.0
 * Updating read me
@@ -71,7 +79,7 @@ You don't need to do any install of drivers if you don't want, just:
 
 - Do the git magic above or somehow else get a copy of ofxOpenNI into your addons directory
 - Copy 'example' folder to yourofdir/apps/yourworkingdir
-- Copy the folder called 'lib' from 'ofxOpenNI/mac/copy_to_data_openni_path' to your 'bin/data/openni' directory of your example.
+- Copy the folder called 'openni' from 'ofxOpenNI/osx' to your 'bin/data/' directory of your project.
 - Rename or copy one of the src-SomeExample-Level (eg., src-UserAndCloud-Medium) to just 'src'
 - You might need to clean before building each time you change the src folder
 
@@ -109,7 +117,7 @@ You don't need to do any install of drivers if you don't want, just:
 - Do the git magic above or somehow else get a copy of ofxOpenNI into your addons directory
 - Make a new project (in 072 by copying emptyExample folder from the examples/emptyExamples directory into your working path -> something like ofFolder/apps/dev/)
 - Copy the 'bin' folder from 'examples/opeNI-SimpleExamples/' and replace the 'bin' folder in your emptyExample (this is largely so you get the right folder structure and config files)
-- Copy the folder called 'lib' from 'ofxOpenNI/mac/copy_to_data_openni_path' to your 'bin/data/openni' directory of your emptyExample
+- Copy the folder called 'openni' from 'ofxOpenNI/data/osx' to your 'bin/data/' directory of your emptyExample
 - In Xcode make a new Group called 'ofxOpenNI' under 'Addons' (right or control click the 'Addons' Group, select Add->New Group)
 - Drag the 'src' and 'include' folders from inside the ofxOpenNI folder (in your addons directory) into the Group 'ofxOpenNI' you just made.
 - Drag the folder 'lib' from bin/data/openni (the one you just copied) into the Group 'ofxOpenNI'
